@@ -1,0 +1,125 @@
+.section {
+  padding: 120px 6%;
+  background: url("../../assets/images/howitworks.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* HEADER */
+.header {
+  max-width: 720px;
+  margin-bottom: 70px;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  max-width: 400px;
+
+}
+
+.eyebrow {
+  font-size: 13px;
+  line-height: 1; /* 🔑 important */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.lineRight {
+  flex: 1;
+  height:1px;
+  background: linear-gradient(
+    to right,
+    #D8A21B60,
+    #D8A21B20
+  );
+}
+.heading {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  line-height: 1.15;
+  color: var(--primary-color);
+}
+
+/* GRID */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.statCard {
+  background: rgba(255, 255, 255, 0.85); /* 🔑 lighter glass */
+  border-radius: 22px;
+  padding: 36px 32px;
+  border: 1px solid #D8A21B42; /* 🔑 subtle border */
+  backdrop-filter: blur(4px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.statCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0)
+  );
+}
+
+.statCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* VALUE */
+.statCard h3 {
+  font-family: var(--font-heading);
+  font-size: 46px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* LABEL */
+.statCard strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* DESCRIPTION */
+.statCard p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 240px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

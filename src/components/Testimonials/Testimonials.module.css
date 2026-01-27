@@ -1,0 +1,174 @@
+.section {
+  padding: 140px 6%;
+  background: url("../../assets/images/howitworks.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+/* HEADER */
+.header {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+ display: inline-block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  line-height: 1.15;
+  color: var(--primary-color);
+}
+
+/* CONTENT LAYOUT */
+.content {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* AVATAR RAIL */
+.avatarRail {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.avatarBtn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: all 0.3s ease;
+}
+
+.avatarBtn img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarBtn:hover {
+  opacity: 0.75;
+}
+
+.active {
+  opacity: 1;
+  border-color: var(--secondary-color);
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  max-width: 720px;
+  background-color: var(--text-light);
+  padding: 40px 40px;
+  border-radius: 30px;
+  border: 1px solid #D8A21B;
+  /* box-shadow: 30px 20px #D8A21B50; */
+  box-shadow: 3px 2px 4px #D8A21B50;
+
+}
+
+.quote {
+  font-size: 26px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* STARS */
+.stars {
+  display: flex;
+  gap: 6px;
+  color: #ffb703;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* AUTHOR */
+.author strong {
+  display: block;
+  font-size: 16px;
+}
+
+.author span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .avatarRail {
+    flex-direction: row;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+
+  .quote {
+    font-size: 22px;
+  }
+}
+/* Wrapper prevents layout shift */
+.testimonialWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Base testimonial */
+.testimonial {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide animations */
+.slideFromRight {
+  animation-name: slideFromRight;
+}
+
+.slideFromLeft {
+  animation-name: slideFromLeft;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

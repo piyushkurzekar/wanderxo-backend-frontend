@@ -1,0 +1,143 @@
+.top {
+  min-height: 100vh;
+  padding: 120px 5%;
+  background: #ffffff;
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../../assets/images/customise.jpg"); */
+  /* background-color: rgba(119, 136, 153, 0.671); */
+  background-color: lightsteelblue;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.para {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  min-height: 600px;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.text {
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Libre Baskerville", serif;
+  color: #3a2b20;
+}
+
+.one,
+.two,
+.three,
+.four {
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.one,
+.three,
+.four {
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  color: #444;
+}
+
+.two {
+  font-weight: 800;
+  color: #0f5f56;
+}
+
+/* Side decorative image - hidden on mobile, shown on desktop */
+.side {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 400px;
+  background-image: url("../../assets/images/custom.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.box {
+  display: none;
+  /* Removed as it seems redundant */
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .top {
+    justify-content: center;
+    padding: 100px 5%;
+  }
+
+  .side {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    min-height: auto;
+    padding: 100px 20px;
+    flex-direction: column;
+  }
+
+  .para {
+    padding: 30px 20px;
+    min-height: auto;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    margin-bottom: 20px;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .side {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .top {
+    padding-top: 120px;
+  }
+
+  .para {
+    padding: 24px 15px;
+  }
+}

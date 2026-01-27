@@ -1,0 +1,178 @@
+.faq-page {
+  min-height: 100vh;
+  padding: 160px 10% 100px 10%;
+  background-color: lightgray;
+  background-image: linear-gradient(
+    135deg,
+    #949797 0%,
+    #fed6e3 100%
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #245b57;
+}
+
+
+.faq-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Main container */
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* FAQ Card */
+.faq-item {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 20px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Question row */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Plus / Minus icon */
+.faq-icon {
+  font-size: 1.6rem;
+  color: #ff7a00;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Answer animation */
+.faq-answer {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #f1f1f1;
+  animation: fadeSlide 0.35s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-page {
+    padding: 120px 6% 80px 6%;
+  }
+
+  .faq-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .faq-page {
+    padding: 130px 6% 80px 6%;
+  }
+
+  .faq-page h1 {
+    font-size: 2.4rem;
+  }
+
+  .faq-container {
+    max-width: 100%;
+  }
+
+  .faq-item {
+    padding: 18px 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .faq-page {
+    padding: 110px 5% 70px 5%;
+  }
+
+  .faq-page h1 {
+    font-size: 1.9rem;
+    margin-bottom: 40px;
+  }
+
+  .faq-item {
+    padding: 16px 16px;
+    border-radius: 10px;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .faq-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+}
+
+.faq-page h1 {
+  color: #1f4d49;
+}
+
+.faq-question {
+  color: #1f4d49;
+}
+
+.faq-answer {
+  color: #333;
+}

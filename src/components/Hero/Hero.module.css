@@ -1,0 +1,354 @@
+/* =========================
+   HERO BASE
+========================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--dark-background);
+}
+
+/* Slides */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Video */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(48, 48, 48, 0.367),
+      rgba(255, 255, 255, 0));
+}
+
+/* =========================
+   NORMAL CONTENT (SLIDE 2 & 3)x
+========================= */
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  color: var(--text-light);
+  z-index: 2;
+  max-width: 850px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  margin: 20px 0 36px;
+  color: var(--muted-text);
+}
+
+/* CTA */
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.ctaGroup button {
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ctaGroup .btn-light {
+  background-color: var(--accent-color);
+  color: var(--dark-background);
+  border: none;
+}
+
+.ctaGroup .btn-light:hover {
+  background-color: #6ac94b;
+}
+
+.ctaGroup .btn-outline-light {
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+/* =========================
+   CINEMATIC HERO (SLIDE 1)
+========================= */
+
+.cinematicWrapper {
+  position: absolute;
+  inset: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.cinematicLayer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Individual Words */
+.word {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  font-weight: 700;
+  opacity: 0;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.textContainer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.textContainer::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  width: 700px;
+  height: 370px;
+  /* background: rgba(255, 255, 255, 0.59);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); */
+  padding: 40px 60px;
+  z-index: -1;
+}
+
+.dark {
+  color: #111;
+}
+
+/* Word Sizes (RESPONSIVE) */
+.xl {
+  font-size: clamp(48px, 7vw, 96px);
+}
+
+.lg {
+  font-size: clamp(36px, 5vw, 72px);
+}
+
+.md {
+  font-size: clamp(26px, 3.5vw, 48px);
+}
+
+.sm {
+  font-size: clamp(18px, 2.5vw, 32px);
+  font-weight: 500;
+}
+
+/* Color Tones */
+.accent {
+  color: var(--accent-color);
+}
+
+.accentSoft {
+  color: var(--secondary-color);
+}
+
+.light {
+  color: var(--text-light);
+}
+
+.muted {
+  color: var(--muted-text);
+}
+
+/* Bottom CTA */
+.bottomCTA {
+  position: absolute;
+  top: 57%;
+  left: 6%;
+  display: flex;
+  gap: 18px;
+  z-index: 3;
+}
+
+.bottomCTA button {
+  /* width: 100%; */
+  padding: 14px 0;
+  font-size: 15px;
+  border-radius: 999px;
+}
+
+
+
+/* =========================
+   DOTS
+========================= */
+
+.dots {
+  position: absolute;
+  bottom: 240px;
+  left: 19%;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(245, 247, 248, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+.activeDot {
+  background: var(--accent-color);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .word {
+    transform: translateX(-3%);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Cinematic text container */
+  .cinematicLayer {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0px 12px;
+  }
+
+  .textContainer {
+    position: relative;
+    width: 100%;
+    margin: 0 0 5px 0;
+    height: 90%;
+    padding: 60px 20px;
+    /* background: rgba(255, 255, 255, 0.65); */
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    text-align: left;
+  }
+
+  .textContainer::before {
+    display: none;
+  }
+
+  /* Words become inline-blocks */
+  .word {
+    position: static !important;
+    display: inline-block;
+    opacity: 1 !important;
+    /* Force visibility on mobile if logic fails */
+    transform: none !important;
+    white-space: normal;
+    text-align: left;
+    filter: none !important;
+    margin-bottom: 5px;
+    margin-right: 8px;
+  }
+
+  /* Font scaling (mobile-optimized) */
+  .xl {
+    font-size: 42px;
+  }
+
+  .lg {
+    font-size: 32px;
+  }
+
+  .md {
+    font-size: 24px;
+  }
+
+  .sm {
+    font-size: 18px;
+  }
+
+  /* CTA stays clean */
+
+  .bottomCTA {
+    position: relative;
+    margin: 0 0 0 5%;
+    left: 10;
+    top: 45%;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 90%;
+    max-width: 320px;
+    z-index: 3;
+  }
+
+  .bottomCTA button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 999px;
+  }
+
+  .dots {
+    position: relative;
+    bottom: auto;
+    margin-top: 30px;
+    margin-left: 5%;
+    left: 0;
+    transform: none;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

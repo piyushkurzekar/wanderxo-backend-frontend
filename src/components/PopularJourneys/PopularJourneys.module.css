@@ -1,0 +1,380 @@
+.section {
+  padding: 110px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  padding: 0 6%;
+  margin-bottom: 70px;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 420px;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lineRight {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right,
+      #d8a21b,
+      #d8a21b20);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 46px;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+}
+
+.subheading {
+  max-width: 600px;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CAROUSEL */
+.carouselWrapper {
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.carousel {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  padding-left: 6%;
+  animation: scroll 28s linear infinite;
+}
+
+.carouselWrapper:hover .carousel {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* TICKET CARD */
+.ticketCard {
+  cursor: pointer;
+  min-width: 360px;
+  background: rgba(216, 162, 27, 0.15);
+  border-radius: 18px;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.35s ease;
+}
+
+.ticketCard:hover {
+  transform: translateY(-6px);
+  background-color: var(--secondary-color);
+}
+
+/* TOP STRIP */
+.ticketTop {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+  padding-bottom: 6px;
+  font-family: var(--font-heading);
+}
+
+/* IMAGE */
+.ticketImage {
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 18px;
+
+}
+
+.ticketImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BOTTOM STRIP */
+.ticketBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 0px 18px;
+  border-top: 2px dashed #ffffff;
+  flex-direction: column;
+}
+
+.ticketBottomInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  /* space before Explore */
+}
+
+.exploreBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.arrow {
+  transition: all 0.3s ease;
+}
+
+.exploreBtn:hover .arrow {
+  transform: translateX(6px);
+  transform: rotate(-45deg);
+
+}
+
+
+/* AIRPORT CODE */
+.airportCode {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: #111;
+}
+
+/* BARCODE */
+.barcode {
+  width: 120px;
+  height: 34px;
+  background:
+    linear-gradient(to right,
+      #111 0%,
+      #111 2%,
+      transparent 2%,
+      transparent 4%,
+
+      #111 4%,
+      #111 5.5%,
+      transparent 5.5%,
+      transparent 8%,
+
+      #111 8%,
+      #111 11%,
+      transparent 11%,
+      transparent 13%,
+
+      #111 13%,
+      #111 14%,
+      transparent 14%,
+      transparent 17%,
+
+      #111 17%,
+      #111 20%,
+      transparent 20%,
+      transparent 22%,
+
+      #111 22%,
+      #111 23.5%,
+      transparent 23.5%,
+      transparent 26%,
+
+      #111 26%,
+      #111 30%,
+      transparent 30%,
+      transparent 32%,
+
+      #111 32%,
+      #111 33%,
+      transparent 33%,
+      transparent 36%,
+
+      #111 36%,
+      #111 39%,
+      transparent 39%,
+      transparent 41%,
+
+      #111 41%,
+      #111 45%,
+      transparent 45%,
+      transparent 48%,
+
+      #111 48%,
+      #111 49.5%,
+      transparent 49.5%,
+      transparent 52%,
+
+      #111 52%,
+      #111 56%,
+      transparent 56%,
+      transparent 58%,
+
+      #111 58%,
+      #111 60%,
+      transparent 60%,
+      transparent 64%,
+
+      #111 64%,
+      #111 68%,
+      transparent 68%,
+      transparent 70%,
+
+      #111 70%,
+      #111 72%,
+      transparent 72%,
+      transparent 75%,
+
+      #111 75%,
+      #111 78%,
+      transparent 78%,
+      transparent 82%,
+
+      #111 82%,
+      #111 86%,
+      transparent 86%,
+      transparent 88%,
+
+      #111 88%,
+      #111 90%,
+      transparent 90%,
+      transparent 94%,
+
+      #111 94%,
+      #111 100%);
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .ticketCard {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .header {
+    padding: 0 5%;
+    margin-bottom: 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .subheading {
+    font-size: 15px;
+  }
+
+  .carouselWrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Momentum scroll on iOS */
+    scroll-behavior: smooth;
+    width: 100%;
+    padding-bottom: 20px;
+    /* Space for scrollbar if visible, or touch area */
+  }
+
+  .carouselWrapper::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+  }
+
+  .carousel {
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: max-content;
+    /* Ensure items stay in a row */
+  }
+
+  .ticketCard {
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    gap: 10px;
+  }
+
+  .ticketImage {
+    height: 280px;
+    margin: 0 12px;
+  }
+
+  .airportCode {
+    font-size: 22px;
+  }
+
+  .barcode {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .ticketCard {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+  }
+
+  .ticketImage {
+    height: 220px;
+    margin: 0 8px;
+  }
+}

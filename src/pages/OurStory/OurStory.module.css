@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+.aboutpage {
+  width: 100%;
+  background: #fdfdfd;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+
+.abouthero {
+  min-height: 100vh;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../../assets/images/customise.jpg"); */
+    background-color:lightsteelblue;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
+  gap: 70px;
+  position: relative;
+}
+
+.herotext {
+  flex: 1;
+  z-index: 1;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.herotext h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #f8f2f2;
+}
+
+.herotext h3 {
+  font-size: 1.3rem;
+  color: #dadb7f;
+  margin-bottom: 16px;
+}
+
+.herotext p {
+  font-size: 1.15rem;
+  color: #f8f2f2;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.heroimage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroimage img {
+  width: 360px;
+  height: 480px;
+  object-fit: cover;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* ================= STORY ================= */
+
+.aboutStoryWrapper {
+  padding: 120px 10%;
+  background: linear-gradient(135deg, #fff5ec, #eef5ff);
+  display: flex;
+  gap: 60px;
+}
+
+.storyLeft,
+.storyRight {
+  flex: 1;
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.storyLeft h2,
+.storyRight h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+
+.storyLeft p,
+.storyRight p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ================= PROMISE ================= */
+
+.aboutPromise {
+  padding: 140px 12%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.aboutPromise h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+/* ================= CONNECT ================= */
+
+.aboutConnect {
+  padding: 140px 12%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.aboutConnect h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.connectOptions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.connectOptions span {
+  background: #fff;
+  padding: 14px 26px;
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.connectBtn {
+  display: inline-block;
+  padding: 16px 46px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #ff7a00, #ff9f45);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ================= ANIMATION ================= */
+
+.animate {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .abouthero {
+    flex-direction: column;
+    text-align: center;
+    padding: 90px 8%;
+  }
+
+  .aboutStoryWrapper {
+    flex-direction: column;
+  }
+
+  .heroimage img {
+    width: 280px;
+    height: 380px;
+  }
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

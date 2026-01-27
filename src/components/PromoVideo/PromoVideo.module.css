@@ -1,0 +1,124 @@
+.wrapper {
+  height: 100vh;
+  background: radial-gradient(circle at top, #0b1c2d, #050b13);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  position: relative;
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* background effects */
+.bgGlow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: rgba(0, 170, 255, 0.15);
+  filter: blur(160px);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* common scene */
+.scene {
+  position: absolute;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+  opacity: 0;
+   will-change: transform, opacity;
+}
+
+.scene h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.2;
+}
+
+.scene p, .scene span {
+  color: #00aaff;
+  margin-top: 14px;
+  letter-spacing: 2px;
+}
+
+/* Scene 3 */
+.scene3 .service {
+  margin: 18px 0;
+  font-size: 1.6rem;
+}
+
+/* Scene 4 */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* Scene 5 */
+.flow {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.flow div {
+  padding: 12px 22px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+}
+
+/* Scene 6 */
+.scene6 button {
+  margin-top: 32px;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #00aaff, #0077ff);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* ---------- Scene 1 Typography ---------- */
+
+.scene1LineBig {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.scene1LineSmall {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00aaff;
+  padding-right: 6px;
+
+  /* IMPORTANT */
+  clip-path: inset(0 100% 0 0);
+}
+
+
+.building,
+.matters {
+  display: inline-block;
+}
