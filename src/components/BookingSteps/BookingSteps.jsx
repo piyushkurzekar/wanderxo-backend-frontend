@@ -23,6 +23,7 @@ const steps = [
   },
 ];
 
+
 const BookingSteps = () => {
   return (
     <section className={styles.section}>
