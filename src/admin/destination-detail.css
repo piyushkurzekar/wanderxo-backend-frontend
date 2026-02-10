@@ -1,0 +1,567 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  height: 80vh;
+ 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-overlay {
+  position: relative;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Buttons */
+.btn-reserve {
+  background: #e63b7a;
+  color: #fff;
+  border: none;
+  padding: 16px 34px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-reserve:hover {
+  background: #d12f6a;
+}
+
+.btn-itinerary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 16px 34px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+   transition: all 0.3s ease;
+}
+
+.btn-itinerary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TITLE BELOW HERO
+========================= */
+
+.hero-info {
+  background: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.hero-info h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.hero-info p {
+  font-size: 2.5rem;
+  font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-info h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+.pricing-section {
+  padding: 4rem 0;
+}
+
+.pricing-card {
+  position: relative;
+  border-radius: 20px;
+    padding: 1.8rem 1.5rem; 
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  max-width: 280px;        /* ⬅️ width control */
+  margin: 0 auto;
+}
+
+/* Early Bird Card */
+.pricing-card.early-bird {
+  background: #fff4f7;
+  border: 2px solid #e83e8c;
+}
+
+/* Regular Card */
+.pricing-card.regular {
+  background: #ffffff;
+}
+
+/* Badge */
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e83e8c;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Text */
+.pricing-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.pricing-price {
+  font-size: 34px;
+  font-weight: 800;
+  color: #e83e8c;
+  margin-bottom: 0.3rem;
+}
+
+.pricing-subtext {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 1.2rem;
+}
+
+/* Bottom note */
+.pricing-note {
+  background: #ffdce6;
+  color: #e83e8c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+
+/* ===========================
+   TOUR HIGHLIGHTS
+=========================== */
+
+.tour-highlights {
+  background: #FCF8F9;
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title span {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e63b7a;
+  margin: 0.8rem auto 0;
+  border-radius: 10px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.highlight-card {
+  border-radius: 22px;
+ 
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease;
+}
+
+.highlight-card img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card img {
+    height: 220px;
+  }
+}
+
+
+/* ===========================
+   ITINERARY SECTION
+=========================== */
+
+.itinerary-section {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+}
+
+.section-title span {
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #e63b7a;
+  margin: 0.8rem auto 0;
+  border-radius: 10px;
+}
+
+/* Card */
+.itinerary-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Alternate layout */
+.itinerary-card.image-right {
+  flex-direction: row;
+}
+
+.itinerary-card.image-left {
+  flex-direction: row-reverse;
+}
+
+/* Content */
+.itinerary-content {
+  flex: 1;
+}
+
+
+
+.itinerary-paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.itinerary-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+.itinerary-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.itinerary-content p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Image */
+.itinerary-image {
+  flex: 1;
+  position: relative;
+}
+
+.itinerary-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* Day badge */
+.day-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #e63b7a;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+  .itinerary-card {
+    flex-direction: column !important;
+    padding: 2rem;
+  }
+
+  .itinerary-image img {
+    height: 260px;
+  }
+}
+
+/* ===========================
+   INCLUSION / EXCLUSION
+=========================== */
+
+.inclusion-section {
+  background: #fffafa;
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+}
+
+.section-title span {
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #e63b7a;
+  margin: 0.8rem auto 0;
+  border-radius: 10px;
+}
+
+/* Cards */
+.include-card,
+.exclude-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 2.5rem;
+  height: 100%;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 2rem;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Icons */
+.icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.icon.check {
+  background: #e63b7a;
+  color: #fff;
+}
+
+.icon.cross {
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* List */
+.include-card ul,
+.exclude-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.include-card li,
+.exclude-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* List Icons */
+.list-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.list-icon.check {
+  background: #e63b7a;
+  color: #fff;
+}
+
+.list-icon.cross {
+  background: #7f8c8d;
+  color: #fff;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .include-card,
+  .exclude-card {
+    padding: 2rem;
+  }
+}
+
+
+
+.important-note {
+  margin: 40px auto 0;
+  padding: 16px 24px;
+  background-color: #fde3ec;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.note-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.note-text {
+  margin: 0;
+  font-size: 14.5px;
+  color: #c2185b;
+  font-weight: 500;
+}
+
+.note-text strong {
+  font-weight: 800;
+}
+
+
+.booking-section {
+    padding: 5rem 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    text-align: center;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.9rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.booking-container p {
+    font-size: 1.05rem;
+    margin-bottom: 1.8rem;
+}
+
+.booking-form {
+    margin-top: 1.8rem;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.booking-form .btn-primary {
+    padding: 1rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}

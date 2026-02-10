@@ -17,6 +17,22 @@
 
 }
 
+
+.dynamicTrips {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* width fix */
+.ticketCard {
+  width: 320px;   /* 👈 yaha control */
+  flex-shrink: 0;
+}
+
+
 .eyebrowWrapper {
   display: flex;
   align-items: center;

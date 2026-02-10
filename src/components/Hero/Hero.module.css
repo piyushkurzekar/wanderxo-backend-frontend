@@ -276,9 +276,9 @@
     margin: 0 0 5px 0;
     height: 90%;
     padding: 60px 20px;
-    /* background: rgba(255, 255, 255, 0.65); */
-    /* backdrop-filter: blur(10px); */
-    /* -webkit-backdrop-filter: blur(10px); */
+    /* background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px); */
     text-align: left;
   }
 
